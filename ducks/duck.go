@@ -10,22 +10,24 @@ func (duck *Duck) SetStrategy(strateg int) {
 	duck.Strategy = strateg
 }
 
-func (duck *Duck) DoIt(){
+func (duck *Duck) DoIt() string{
 	if duck.Strategy == 0{
-		duck.Fly()
+		return duck.Fly()
 	}
 
 	if duck.Strategy == 1{
-		duck.Dive()
+		return duck.Dive()
 	}
 
 	if duck.Strategy == 2{
-		duck.Quack()
+		return duck.Quack()
 	}
 
 	if duck.Strategy == 3{
-		duck.Swim()
+		return duck.Swim()
 	}
+
+	return ""
 }
 
 func (duck Duck) Fly() string{
@@ -37,7 +39,7 @@ func (duck Duck) Dive() string{
 }
 
 func (duck Duck) Quack() string{
-	return "Я " + duck.Types + ", я Крякая"
+	return "Я " + duck.Types + ", я Крякаю"
 }
 
 func (duck Duck) Swim() string{
